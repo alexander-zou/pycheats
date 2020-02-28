@@ -10,6 +10,8 @@
 
 '''
 
+# see https://docs.python.org/3/library/pathlib.html for OO-style path handling
+
 import os
 import tempfile
 import shutil
@@ -21,6 +23,9 @@ print( "pwd: " + path)
 # absolute path:
 path = os.path.abspath( path)
 print( "absolute pwd: " + path)
+
+#dirname:
+print( "dirname: " + os.path.dirname( path))
 
 # basename:
 path = os.path.basename( path)
@@ -52,7 +57,12 @@ with open( file1, 'w') as f:
 
 # copy file:
 file2 = os.path.join( dir2, "file2.txt")
-shutil.copy2( file1, file2)
+shutil.copy( file1, file2)
+
+# also:
+# shutil.move( file1, file2) # move/rename file
+# shutil.copy2( file1, file2) # copy file like 'shutil.copy()', while preserving metadata like 'cp -p'
+# shutil.copytree( src, dst) # copy folder like 'cp -r'
 
 # read file:
 with open( file2, 'r') as f:
@@ -62,6 +72,10 @@ with open( file2, 'r') as f:
 
 # common path:
 print( "common path of '" + file1 + "' & '" + file2 + "' : " + os.path.commonpath( ( file1, file2)))
+
+# rename file:
+file3 = os.path.join( dir2, "file3.txt")
+os.rename( file2, file3)
 
 # travel tree:
 print( "traveling '" + base_path + "' ...")
