@@ -3,7 +3,7 @@
 
 '''
 
-@File   : types.py   
+@File   : string.py   
 @Author : alexander.here@gmail.com  
 @Date   : 2020-02-18 16:35   
 @Brief  :  
