@@ -70,6 +70,16 @@ with open( file2, 'r') as f:
     print( f.read())
     print( '==============================')
 
+# buffered reading:
+with open( file2, 'r') as f:
+    buf = f.read( 4096)
+    count = 0
+    while len( buf) > 0:
+        count += len( buf)
+        # do things with buffered data
+        buf = f.read( 4096)
+print( "size of file2", count)
+
 # common path:
 print( "common path of '" + file1 + "' & '" + file2 + "' : " + os.path.commonpath( ( file1, file2)))
 
