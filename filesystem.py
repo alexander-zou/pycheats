@@ -35,6 +35,10 @@ print( "basename: " + path)
 base_path = tempfile.mkdtemp()
 print( "temp dir created: " + base_path)
 
+# checking:
+print( "is dir: ", os.path.isdir( base_path))   # True
+print( "is file: ", os.path.isfile( base_path)) # False
+
 # join path:
 dir1 = os.path.join( base_path, 'some/parent/dir1')
 print( "path of dir1: " + dir1)
