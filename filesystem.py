@@ -91,6 +91,9 @@ print( "common path of '" + file1 + "' & '" + file2 + "' : " + os.path.commonpat
 file3 = os.path.join( dir2, "file3.txt")
 os.rename( file2, file3)
 
+# list folder content:
+print( os.listdir( "."))
+
 # travel tree:
 print( "traveling '" + base_path + "' ...")
 for base, folders, files in os.walk( base_path):
