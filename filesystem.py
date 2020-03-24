@@ -43,6 +43,10 @@ print( "is file: ", os.path.isfile( base_path)) # False
 dir1 = os.path.join( base_path, 'some/parent/dir1')
 print( "path of dir1: " + dir1)
 
+# find/strip extension suffix:
+print( 'splitext:', os.path.splitext( '/aaa/bbb/ccc.txt.bak'))
+print( 'splitext:', os.path.splitext( '/aaa/bbb.ccc/ddd'))
+
 # make folder with parent:
 os.makedirs( dir1, 0o777, exist_ok = True) # NEED PYTHON3 !!!
 # raise Error when path existed if exist_of = False
