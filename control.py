@@ -35,19 +35,24 @@ else:
 my_exec( 'print( x if x % 2 == 0 else 2 * x)')
 
 # loops:
-print( '=== count down ===')
+print( '==== count down ====')
 count = 3
 while count > 0:
     print( count)
     count -= 1
-print( '==================')
+print( '====================')
 
-print( '==== foreach =====')
+print( '===== foreach ======')
 for x in [ 2, 3, 5, 7, 13]:
     if x > 10:
         break # & continue works for while too
     print( x)
-print( '==================')
+print( '====================')
+
+print( '= foreach w/ index =')
+for idx, value in enumerate( [ 2, 3, 5, 7, 13]):
+    print( idx, '->', value)
+print( '====================')
 
 # pass - complete structure without actually doing anything:
 def noop():
