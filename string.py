@@ -29,6 +29,12 @@ idx1 = s2.index( "'") # raise error if not found
 idx2 = s2.find( '"') # return -1 if not found
 print( s2[ idx1 : idx2 + 1]) # [START:END] or [START:END:STEP], empty for default
 
+# check if contains:
+my_string = 'my string'
+my_pattern = 'ing'
+if my_pattern in my_string:
+    print( "'" + my_string + "' contains '" + my_pattern + "'.")
+
 # operations:
 print( "xyz" + "123")
 print( "xyz" * 3)
