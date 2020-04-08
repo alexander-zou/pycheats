@@ -3,7 +3,7 @@
 
 '''
 
-@File   : string.py   
+@File   : strings.py   
 @Author : alexander.here@gmail.com  
 @Date   : 2020-02-18 16:35   
 @Brief  :  
@@ -66,5 +66,5 @@ print( "{1}: {0}, {1}".format( "hello", "world"))
 # c-style format string:
 print( "%s, %d, %6.2f" % ( 'xyz', 123, 4.5678))
 
-# End of 'string.py' 
+# End of 'strings.py' 
 
