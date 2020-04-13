@@ -57,6 +57,9 @@ print( "path of dir2: " + dir2)
 # normal mkdir:
 os.mkdir( dir2)
 
+# change current working directory:
+os.chdir( dir2)
+
 # write file:
 file1 = os.path.join( dir1, "file1.txt")
 with open( file1, 'w') as f:
