@@ -75,6 +75,10 @@ shutil.copy( file1, file2)
 # shutil.copy2( file1, file2) # copy file like 'shutil.copy()', while preserving metadata like 'cp -p'
 # shutil.copytree( src, dst) # copy folder like 'cp -r'
 
+# get info:
+print( "size of '%s' is %d bytes." % ( file2, os.path.getsize( file2)))
+print( "modify timestamp of '%s' is %f." % ( file2, os.path.getmtime( file2)))
+
 # read file:
 with open( file2, 'r') as f:
     print( '==== Content of file2.txt ====')
@@ -89,7 +93,7 @@ with open( file2, 'r') as f:
         count += len( buf)
         # do things with buffered data
         buf = f.read( 4096)
-print( "size of file2", count)
+print( "size of file2:", count)
 
 # common path:
 print( "common path of '" + file1 + "' & '" + file2 + "' : " + os.path.commonpath( ( file1, file2)))
