@@ -23,6 +23,7 @@ plt.plot( x, y1)
 #plt.xlabel('x - axis') 
 #plt.ylabel('y - axis')
 #plt.title('My Graph')
+#plt.grid( True)
 print( "Press 'Q' to continue ...")
 plt.show()
 
