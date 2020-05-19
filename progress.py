@@ -8,7 +8,8 @@ TOTAL = 200
 def SimpleProgress():
     for p in range( TOTAL + 1):
         time.sleep( 0.01)
-        print( "\rProgress: %.0f%%" % ( p / TOTAL * 100), end = '', flush = False)
+        print( "\rProgress: %.0f%%" % ( p / TOTAL * 100), end = '', flush = True)
+        # for python2.7, use 'sys.stdout.flush()'
     print( 'DONE') # make sure print new line
 
 def UseTqdm():
