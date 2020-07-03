@@ -19,6 +19,9 @@ import matplotlib.pyplot as plt
 x = [ 1, 2, 3]
 y1 = [ 2, 4, 1]
 
+# to support CJK charactors:
+plt.rcParams[ 'font.sans-serif'] = [ 'SimHei', 'Heiti TC', 'Adobe Heiti Std', 'Adobe Fan Heiti Std']
+
 plt.plot( x, y1)
 #plt.xlabel('x - axis') 
 #plt.ylabel('y - axis')
