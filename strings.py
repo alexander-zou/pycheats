@@ -39,6 +39,10 @@ if my_pattern in my_string:
 print( "xyz" + "123")
 print( "xyz" * 3)
 
+# join:
+print( 'X'.join( ( 'A', 'B', 'C')))
+print( ''.join( [ 'P', 'y', 't', 'h', 'o', 'n']))
+
 # regex expersion:
 
 import re
