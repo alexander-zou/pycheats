@@ -21,6 +21,8 @@ y1 = [ 2, 4, 1]
 
 # to support CJK charactors:
 plt.rcParams[ 'font.sans-serif'] = [ 'SimHei', 'Heiti TC', 'Adobe Heiti Std', 'Adobe Fan Heiti Std']
+# to avoid that fonts don't have unicode-minus:
+plt.rcParams[ 'axes.unicode_minus'] = False
 
 plt.plot( x, y1)
 #plt.xlabel('x - axis') 
