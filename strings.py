@@ -29,6 +29,8 @@ idx1 = s2.index( "'") # raise error if not found
 idx2 = s2.find( '"') # return -1 if not found
 print( s2[ idx1 : idx2 + 1]) # [START:END] or [START:END:STEP], empty for default
 
+print( "replace 'o' to '*' : " + s1.replace( 'o', '*'))
+
 # check if contains:
 my_string = 'my string'
 my_pattern = 'ing'
