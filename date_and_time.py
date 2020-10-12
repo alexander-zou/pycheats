@@ -21,6 +21,10 @@ print( 'local time struct:', time.localtime()) # time.localtime() == time.localt
 print( 'asctime:', time.asctime( time.localtime()))
 print( 'formated time:', time.strftime( "%Y-%m-%d %H:%M:%S", time.localtime()))
 
+from datetime import datetime
+unix_ts = 1577927552.593
+print( 'converted time:', datetime.fromtimestamp( unix_ts))
+
 import calendar
 
 print( 'Calendar:')
