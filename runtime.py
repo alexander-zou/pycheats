@@ -14,7 +14,7 @@ Copyright (c) 2020 Face++, Megvii. All Rights Reserved
 # get python3's function vertion of print in python2:
 from __future__ import print_function
 
-import sys
+import os, sys
 
 # get python version:
 major_ver = sys.version_info.major
@@ -29,6 +29,23 @@ patch_ver = sys.version_info[ 2]
 
 for idx, arg in enumerate( sys.argv):
     print( 'argument #%d: %s' % (idx, arg))
+
+# run shell command:
+
+if os.name != 'posix':
+    cmd = 'ver'
+else:
+    cmd = 'uname -a'
+print( 'Running command: ' + cmd)
+ret = os.system( cmd)
+print( "returned: %d" % ( ret))
+
+print( 'Running command: ' + cmd)
+stream = os.popen( cmd) # or: with os.popen( cmd) as stream
+print( "Command Output:")
+print( stream.read())
+stream.close()
+
 
 # import from path:
 path = 'strings.py'
