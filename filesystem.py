@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
 '''
@@ -12,7 +12,7 @@
 
 # see https://docs.python.org/3/library/pathlib.html for OO-style path handling
 
-import os
+import os, sys
 import tempfile
 import shutil
 
@@ -48,8 +48,11 @@ print( 'splitext:', os.path.splitext( '/aaa/bbb/ccc.txt.bak'))
 print( 'splitext:', os.path.splitext( '/aaa/bbb.ccc/ddd'))
 
 # make folder with parent:
-os.makedirs( dir1, 0o777, exist_ok = True) # NEED PYTHON3 !!!
-# raise Error when path existed if exist_of = False
+if sys.version_info.major >= 3:
+    os.makedirs( dir1, 0o777, exist_ok = True)
+    # raise Error when path existed if exist_of = False
+else:
+    os.makedirs( dir1, 0o777)
 
 dir2 = os.path.join( dir1, '..', 'dir2')
 print( "path of dir2: " + dir2)
@@ -85,6 +88,10 @@ with open( file2, 'r') as f:
     print( f.read())
     print( '==============================')
 
+# line-by-line reading:
+with open( file2, 'r') as f:
+    print( f.readlines())   # get all content as list of lines 
+
 # buffered reading:
 with open( file2, 'r') as f:
     buf = f.read( 4096)
@@ -96,7 +103,8 @@ with open( file2, 'r') as f:
 print( "size of file2:", count)
 
 # common path:
-print( "common path of '" + file1 + "' & '" + file2 + "' : " + os.path.commonpath( ( file1, file2)))
+if sys.version_info.major >= 3:
+    print( "common path of '" + file1 + "' & '" + file2 + "' : " + os.path.commonpath( ( file1, file2)))
 
 # rename file:
 file3 = os.path.join( dir2, "file3.txt")
