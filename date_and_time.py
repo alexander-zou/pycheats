@@ -24,6 +24,8 @@ print( 'formated time:', time.strftime( "%Y-%m-%d %H:%M:%S", time.localtime()))
 from datetime import datetime
 unix_ts = 1577927552.593
 print( 'converted time:', datetime.fromtimestamp( unix_ts))
+ts = datetime( 2001, 2, 28, 11, 59, 1)
+print( 'strftime: ' + ts.strftime( "%Y-%m-%d %H:%M:%S"))
 
 import calendar
 
