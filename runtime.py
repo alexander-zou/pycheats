@@ -2,7 +2,6 @@
 # -*- coding: UTF-8 -*-
 
 '''
-Copyright (c) 2020 Face++, Megvii. All Rights Reserved
 
 @File   : runtime.py   
 @Author : zoujiachen@megvii.com   

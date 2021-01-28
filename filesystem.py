@@ -91,6 +91,7 @@ with open( file2, 'r') as f:
 # line-by-line reading:
 with open( file2, 'r') as f:
     print( f.readlines())   # get all content as list of lines 
+    # or f.readline() to read one line
 
 # buffered reading:
 with open( file2, 'r') as f:
