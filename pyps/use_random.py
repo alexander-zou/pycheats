@@ -3,7 +3,7 @@
 
 '''
 
-@File   : rand.py   
+@File   : use_random.py
 @Author : alexander.here@gmail.com   
 @Date   : 2020-07-10 16:55 CST(+0800)   
 @Brief  : https://docs.python.org/zh-cn/3/library/random.html
@@ -49,5 +49,5 @@ print( [ random.random() for i in range( 3)])
 random.seed( 1)
 print( [ random.random() for i in range( 3)])
 
-# End of 'rand.py' 
+# End of 'use_random.py' 
 

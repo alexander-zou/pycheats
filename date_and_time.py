@@ -16,7 +16,7 @@ from __future__ import print_function
 
 import time
 
-print( 'current timestamp:', time.time())
+print( 'current timestamp:', time.time()) # unix epoch time in seconds as float number
 print( 'local time struct:', time.localtime()) # time.localtime() == time.localtime( time.time())
 print( 'asctime:', time.asctime( time.localtime()))
 print( 'formated time:', time.strftime( "%Y-%m-%d %H:%M:%S", time.localtime()))

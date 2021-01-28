@@ -3,7 +3,7 @@
 
 '''
 
-@File   : unzip.py   
+@File   : use_zipfile.py
 @Author : alexander.here@gmail.com  
 @Date   : 2020-02-27 12:38 CST(+0800)   
 @Brief  :  
@@ -46,5 +46,5 @@ with ZipFile( 'pack.zip') as zipObj:
 
 # for more powerful archive tools, check out https://pypi.org/project/libarchive/
 
-# End of 'unzip.py' 
+# End of 'use_zipfile.py' 
 
