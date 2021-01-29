@@ -111,6 +111,11 @@ if sys.version_info.major >= 3:
 file3 = os.path.join( dir2, "file3.txt")
 os.rename( file2, file3)
 
+# remove file:
+os.remove( file3)
+# to remove empty folder:               os.rmdir( path)
+# to recursively remove empty folders:  os.removedirs( path)
+
 # list folder content:
 print( os.listdir( "."))
 
