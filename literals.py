@@ -35,10 +35,12 @@ float( 'nan')
 # string literals:
 'string'
 "string"
-'''
+
+long = '''\
 this is a very long string.
-a long string can contain many lines.
-'''
+a long string can contain many lines.'''
+
+print( long)
 
 # End of 'literals.py' 
 

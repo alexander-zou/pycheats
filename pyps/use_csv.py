@@ -43,7 +43,7 @@ elif sys.version_info.major >= 3:
 data = u'''\
 "Title","Column 1",Column 2
 xxx,1.23,4.56
-"yyy",7,8
+"yyy",,8
 '''
 wrapped_string = StringIO( data)
 reader = csv.reader( wrapped_string)
