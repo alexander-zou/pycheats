@@ -17,7 +17,6 @@
 #               https://docs.sqlalchemy.org/en/13/orm/tutorial.html
 
 import sqlalchemy
-from sqlalchemy import sql
 
 # Create or open sqlite db:
 engine = sqlalchemy.create_engine( 'sqlite:///use_sqlalchemy.db', echo = False)
