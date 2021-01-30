@@ -33,5 +33,21 @@ func( arg4 = 789)
 func = partial( foo, 987, arg3 = 321)
 func( 654)
 
+# Variable arguments:
+
+def func_w_anonymous_varargs( x, y, *args):
+    print( "x:", x)
+    print( "y:", y)
+    print( "args:", args)
+
+func_w_anonymous_varargs( 1, 2, 3, 4, 5)
+
+def func_w_named_varargs( x, y, **kwargs):
+    print( "x:", x)
+    print( "y:", y)
+    print( "args:", kwargs)
+
+func_w_named_varargs( 1, 2, a=7, b=8, c='9')
+
 # End of 'function.py' 
 
