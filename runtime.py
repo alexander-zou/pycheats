@@ -13,6 +13,9 @@
 # get python3's function vertion of print in python2:
 from __future__ import print_function
 
+# get dict that contains all variables and functions currently in envirment:
+print( vars())
+
 import os, sys
 
 # get python version:
