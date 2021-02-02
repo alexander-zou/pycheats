@@ -15,8 +15,20 @@
 
 import pandas
 
+# Create DataFrame:
+data_frame = pandas.DataFrame( [['ant', 'bee', 'cat'], ['dog', None, 'fly']], columns = [ 'ColumnA', 'ColumnB', 'ColumnC'])
+print( data_frame)
+
+# Check for NULL data:
+print( pandas.isnull( data_frame))
+print( pandas.isnull( data_frame.at[ 1, 'ColumnB']))
+# opposite to pandas.notnull()
+
 # Load data:
 data_frame = pandas.read_csv( 'use_csv.csv')
+# to read all cells(except for empty cells) as str:
+#   data_frame = pandas.read_csv( 'use_csv.csv', dtype=str)
+
 # to load data from database:
 '''
 import sqlalchemy
