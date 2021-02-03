@@ -18,6 +18,7 @@ import pandas
 # Create DataFrame:
 data_frame = pandas.DataFrame( [['ant', 'bee', 'cat'], ['dog', None, 'fly']], columns = [ 'ColumnA', 'ColumnB', 'ColumnC'])
 print( data_frame)
+print( 'data_frame.shape: ', data_frame.shape)
 
 # Check for NULL data:
 print( pandas.isnull( data_frame))

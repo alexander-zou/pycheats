@@ -25,7 +25,7 @@ except StopIteration:
 class FibonacciSequence:
     class Iter:
         def __init__( self, size):
-            self.count = size
+            self.size = self.count = size
             self.prev, self.curr = 0, 1
 
         def __next__( self):
@@ -37,6 +37,9 @@ class FibonacciSequence:
 
         def next( self): # for Python2 compatible
             return FibonacciSequence.Iter.__next__( self)
+
+        def __len__( self): # optional
+            return self.size
 
     def __init__( self, size = 10):
         self.size = size
