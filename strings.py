@@ -64,6 +64,9 @@ pattern = re.compile( '^[a-z]+\\s+[a-z]+', re.I | re.M ) # re.M for multiline
 for m in pattern.findall( long_string):
     print( m)
 
+# Split string with regex as delimiter:
+print( re.split( ',|;|\.|\s', 'hello,world.hello program'))
+
 # format string:
 print( "\nformat:")
 print( "{}, {}".format( "hello", "world"))
