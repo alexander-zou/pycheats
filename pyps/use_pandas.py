@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
 '''
@@ -63,6 +63,13 @@ data_frame[ 'Age-Last-Year'] = data_frame[ 'Age'] - 1
 data_frame[ 'Role'].fillna( '???', inplace = True)
 data_frame[ 'Name+Role'] = data_frame[ 'Name'] + ' : ' + data_frame[ 'Role']
 
+# Plotting:
+try:
+    import matplotlib.pyplot as plt
+    data_frame.plot.scatter( x='Role', y='Name', c='Age', colormap='jet', title='Scatter Graph')
+    plt.show()
+except: pass
+
 # Drop Column:
 data_frame.drop( [ 'Role', 'Age'], axis = 1, inplace = True)
 
@@ -70,6 +77,7 @@ data_frame.drop( [ 'Role', 'Age'], axis = 1, inplace = True)
 #data_frame.to_excel( 'output.xls')
 #data_frame.to_csv( 'output.csv')
 print( data_frame)
+
 
 # End of 'use_pandas.py' 
 
