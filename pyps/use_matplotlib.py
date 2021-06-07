@@ -50,6 +50,23 @@ plt.hist( datas, bins = range( 10), color = 'b') # define edge of each bin as 0,
 print( "Press 'Q' to continue ...")
 plt.show()
 
+# Draw Image:
+try:
+    import numpy as np
+    img = np.zeros( ( 64, 64), dtype=np.float32)
+    for y in range( img.shape[ 0]):
+        for x in range( img.shape[ 1]):
+            img[ y, x] = np.sin( x * 0.05 + y * 0.25) + 1
+    plt.imshow( img, cmap='gray')
+    plt.show()
+    ct = plt.contourf( img, np.arange( 0, 2.1, 0.2), cmap='jet') # plt.contour() for no filling
+    cb = plt.colorbar( ct)
+    plt.show()
+    cb.remove() # NOTE: plt.cla() won't clear colorbar.
+except:
+    print( 'need numpy for image drawing demo.')
+    pass
+
 # 3D:
 from mpl_toolkits import mplot3d
 try:
