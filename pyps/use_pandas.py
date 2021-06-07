@@ -20,7 +20,7 @@ data_frame = pandas.DataFrame( [['ant', 'bee', 'cat'], ['dog', None, 'fly']], co
 print( data_frame)
 print( 'data_frame.shape: ', data_frame.shape)
 
-# Check for NULL data:
+# Random Access and Check for NULL data:
 print( pandas.isnull( data_frame))
 print( pandas.isnull( data_frame.at[ 1, 'ColumnB']))
 # opposite to pandas.notnull()
@@ -43,7 +43,7 @@ ages = data_frame[ 'Age']
 print( 'Age Statistics: ', ages.mean(), ages.std())
 
 # Append:
-data_frame = data_frame.append( { 'Name':'Daisy', 'Age':30}, ignore_index = True)
+data_frame = data_frame.append( { 'Name':'Daisy', 'Age':30}, ignore_index=True) # ignore index to append dict
 
 # Travel:
 for idx, row in data_frame.iterrows():
@@ -57,6 +57,14 @@ print( "number of unique age: ", data_frame[ 'Age'].nunique())
 elder = data_frame[ data_frame[ 'Age'] > 28]
 print( 'number of name data (Age>28): ', elder.count()[ 'Name']) # equivalent to: elder[ 'Name'].count()
 print( 'number of role data (Age>28): ', elder.count()[ 'Role'])
+
+# Retrieve Rows:
+print( 'Retrieve Row -1:')
+print( data_frame.iloc[ -1])
+print( 'Retrieve Row 0, 1, 3:')
+print( data_frame.iloc[ [ 0, 1, 3]])
+print( 'Retrieve Row 0, 2:')
+print( data_frame.iloc[ ::2])
 
 # Calculate Column:
 data_frame[ 'Age-Last-Year'] = data_frame[ 'Age'] - 1
