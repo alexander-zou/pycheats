@@ -31,6 +31,8 @@ print( s.unpack( 'HHif', binary_data))
 #   H       unsigned short  2
 #   i       int             4
 #   I       unsigned        4
+#   q       int64_t         8
+#   Q       uint64_t        8
 #   f       float           4
 #   d       double          8
 
