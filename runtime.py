@@ -32,6 +32,14 @@ patch_ver = sys.version_info[ 2]
 for idx, arg in enumerate( sys.argv):
     print( 'argument #%d: %s' % (idx, arg))
 
+# tell which OS:
+if sys.platform == 'win32':
+    print( 'Using Windows.')
+elif sys.platform == 'darwin':
+    print( 'Using MacOS')
+elif sys.platform.startswith == 'linux':
+    print( 'Using Linux')
+
 # run shell command:
 
 if os.name != 'posix':
