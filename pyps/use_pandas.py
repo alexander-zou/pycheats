@@ -42,8 +42,9 @@ date_frame = pandas.read_sql_query( 'SQL Statement', engine)
 ages = data_frame[ 'Age']
 print( 'Age Statistics: ', ages.mean(), ages.std())
 
-# Append:
-data_frame = data_frame.append( { 'Name':'Daisy', 'Age':30}, ignore_index=True) # ignore index to append dict
+# Append: 
+# data_frame = data_frame.append( { 'Name':'Daisy', 'Age':30}, ignore_index=True) # DEPRECATED!!!
+data_frame = pandas.concat( [ data_frame, pandas.DataFrame( [[ 'Daisy', 30]], columns=[ 'Name', 'Age'])])
 
 # Travel:
 for idx, row in data_frame.iterrows():
@@ -84,8 +85,20 @@ data_frame.drop( [ 'Role', 'Age'], axis = 1, inplace = True)
 # Output:
 #data_frame.to_excel( 'output.xls')
 #data_frame.to_csv( 'output.csv')
+#data_frame.to_csv( 'output.csv', encoding='utf-8-sig') # use BOM to avoid Excel codec confusion
 print( data_frame)
 
+# From Dictionary:
+data_frame = pandas.DataFrame( {
+    'Column1' : [ 1, 2, 3, 4, 7, 9],
+    'Column2' : [ 'XYZW', 'XXXXX', 'A', 'A', 'ABC', 'CBA']
+})
+print( 'Original Order:\n', data_frame)
+
+# Sorting:
+print( 'Sort By Column2:\n', data_frame.sort_values( by='Column2'))
+print( 'Sort By Column2+Column1, Descending:\n', data_frame.sort_values( by=['Column2','Column1'], ascending=False))
+print( 'Sort By len() of Column2:\n', data_frame.sort_values( by='Column2', key=lambda col:col.apply( lambda s:len( s))))
 
 # End of 'use_pandas.py' 
 
