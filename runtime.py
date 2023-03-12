@@ -73,5 +73,12 @@ else:
     spec.loader.exec_module( module)
 print( module.long_string)
 
+# environment:
+os.environ[ 'ABC'] = "XYZ"                  # set env
+print( 'env: ABC=' + os.environ[ 'ABC'])    # get env
+os.putenv( 'ABC', '123')    # set env for subprocesses
+print( 'cur-process : ABC=' + os.environ[ 'ABC'])
+os.system( 'bash -c "echo sub-process : ABC=$ABC"')
+
 # End of 'runtime.py' 
 
