@@ -3,7 +3,7 @@
 
 '''
 
-@File   : types.py   
+@File   : datatype.py   
 @Author : alexander.here@gmail.com  
 @Date   : 2020-01-13 18:36   
 @Brief  :  
@@ -68,5 +68,5 @@ print( len( a_list), len( a_tuple), len( a_set), len( a_dict))
 
 
 
-# End of 'types.py' 
+# End of 'datatype.py' 
 
