@@ -35,6 +35,10 @@ plt.plot( x, y1, label = 'line 1', marker = '^', color = '#bbf90f', linestyle = 
 plt.scatter( x, y2, label = 'line 2', marker = 'x', color = 'red')
 # common markers: '^', 'x', 'd', '+', 'o', 'v', 's', '<', '1', '*', '>', 'h'
 # common linestyles: '--', '-.', ':', '.', 'o', 'p', '|', '_'
+plt.text( x[0], y2[0], 'Point1')
+plt.text( x[1], y2[1], 'Point2')
+plt.text( x[2], y2[2], 'Point3')
+# for better text placement, see: https://github.com/Phlya/adjustText
 plt.xlabel('x - axis') 
 plt.ylabel('y - axis')
 plt.title('My Graph')
