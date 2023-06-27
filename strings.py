@@ -10,6 +10,8 @@
 
 '''
 
+import sys
+
 # string literals:
 s1 = "Hello, 'World\" !"
 s2 = 'Hello, \'World" !'
@@ -74,6 +76,11 @@ print( "{1}: {0}, {1}".format( "hello", "world"))
 
 # c-style format string:
 print( "%s, %d, %6.2f" % ( 'xyz', 123, 4.5678))
+
+# f-string:
+if ( sys.version_info.major, sys.version_info.minor) >= ( 3, 6):
+    x = 259
+    print( f"sqrt({x}) = {x**0.5} ≈ {x**0.5:.3f}\n{x} in hexadecimal is {x:#06x}\njust a left brace character: {{")
 
 # End of 'strings.py' 
 
