@@ -17,6 +17,10 @@ print( type( 1), type( 1.2), type( 'hello'),
         type( ( 1, 2, 3)), type( [ 1, 2, 3]), type( { 1, 2, 3}),
         type( { 1:2, 3:4}))
 
+# check type with inheritance relationships considered:
+if isinstance( 1, int):
+        print( "isinstance( 1, int)")
+
 # type is a type:
 print( int, float, str, tuple, list, set, dict)
 print( None, type( None), type( type( None)))
