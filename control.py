@@ -32,6 +32,12 @@ elif x % 2 == 0:
 else:
     print( 'x is odd number')
 
+# check for None or empty object:
+if x:
+    print( "x is NOT None, and x is NOT empty")
+if not x:
+    print( "x is either None or empty")
+
 my_exec( 'print( x if x % 2 == 0 else 2 * x)')
 
 # loops:
