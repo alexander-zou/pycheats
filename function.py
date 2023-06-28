@@ -49,5 +49,17 @@ def func_w_named_varargs( x, y, **kwargs):
 
 func_w_named_varargs( 1, 2, a=7, b=8, c='9')
 
+# !!! WARNING !!!
+# Be Careful with default argument objects,
+# the instance will be shared across multiple calls:
+
+def bar( l=[]):
+    l.append( len( l))
+    print( l)
+
+bar()
+bar()
+bar()
+
 # End of 'function.py' 
 
