@@ -82,5 +82,12 @@ if ( sys.version_info.major, sys.version_info.minor) >= ( 3, 6):
     x = 259
     print( f"sqrt({x}) = {x**0.5} ≈ {x**0.5:.3f}\n{x} in hexadecimal is {x:#06x}\njust a left brace character: {{")
 
+# string -> bytes:
+"helloword".encode( "utf-8")
+
+# bytes -> string:
+b'helloword'.decode( "utf-8")
+
+
 # End of 'strings.py' 
 
