@@ -11,7 +11,7 @@
 '''
 
 import re
-key = lambda x:[int(seg) if seg.isdigit() else seg.lower() for seg in re.split( '(\d+)', x)]
+key = lambda x:[int(seg) if seg.isdigit() else seg.lower() for seg in re.split( '(\\d+)', x)]
 
 l = [
     'data028-ZZZ',
